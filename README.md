@@ -15,5 +15,5 @@ Java (IntelliJ Idea)
 
 #### Funcionalitats
 - Menu Inicial
-   1. Iniciar partida
+  1. Iniciar partida
 
