@@ -2,7 +2,7 @@
 ## Joc del Blackjack
 
 ### Authors
-Gabriel Bardají - 1568297@uab.cat
+Gabriel Bardají - 1568297@uab.cat  
 Guillem Martinez - 1563566@uab.cat
 
 
