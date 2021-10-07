@@ -26,9 +26,14 @@ Java (IntelliJ Idea)
 4. Si el jugador demana una carta, la banca realitzarà la seva acció. (si la suma de cartes de la banca és superior a 16, aquesta es planta)
 5. Sempre i quan les cartes del jugador no sumin més de 21 podrà plantar-se. En el cas que sumin més de 21, el jugador ha perdut directament i se li retirarà la quantitat de fitxes que havia apostat.
 6. Si el jugador guanya a la banca gaunyarà la quantitat que hagi apostat.
+
 7. Hi haurà la possibilitat de seguir jugant o de finalitzar la partida i se li mostrarà al jugador el nombre d efitxes amb el que ha finalitzat.
+
    7.1 Si el jugador té més fitxes que les inicials mostrarem "HAS GUANYAT x FITXES! :)" <br/>
+   
    7.2 Si el jugador té les mateixes fitxes que les inicials mostrarem "BEN JUGAT, HAS MANTINGUT LES FITXES! :|"
+   
    7.3 Si el jugador té menys fitxes que les inicials mostrarem "OOOH, HAS PERDUT x FITXES! :("
+   
 8. Tornarem a mostrar el menu principal
  
