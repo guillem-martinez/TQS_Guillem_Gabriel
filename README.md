@@ -14,12 +14,12 @@ Java (IntelliJ Idea)
 - Fitxes
 
 #### Funcionalitats
-- Menu Inicial
+##### Menu Inicial
   1. Iniciar partida
   2. Escollir nombre de jugadors
   3. Sortir
 
-- Partida
+##### Partida
   1. La partida s'inicia amb un nombre determinat de fitxes per al o els jugadors. 
   2. Els jugadors introdueixen la quantitat de fitxes que volen apostar-se. 
   3. Es demana al jugador que seleccioni si vol rebre una carta o plantar-se.
