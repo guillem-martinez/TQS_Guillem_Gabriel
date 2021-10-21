@@ -1,5 +1,9 @@
 # TQS_Projecte_Guillem_Gabriel
+
 ## Joc del Blackjack
+
+## Professor al càrrec 
+tbvaliente@gmail.com
 
 ### Authors
 Gabriel Bardají - 1568297@uab.cat  
