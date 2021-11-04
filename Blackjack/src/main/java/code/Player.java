@@ -3,7 +3,19 @@ package code;
 public class Player {
 
   private int chips;
-  public String[] name;
+  private String name;
   private int bet;
   public Hand hand;
+
+  public Player(){}
+
+  public int getChips() {return chips;}
+  public String getName(){return name;}
+  public int getBet(){return bet;}
+
+  public void bust(){}
+  public void win(){}
+  public void loss(){}
+  public void clearHand(){}
+
 }
