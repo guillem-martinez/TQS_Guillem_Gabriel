@@ -13,4 +13,10 @@ public class Dealer_Test {
   void setUp(){
     dealer = new Dealer();
   }
+
+  @Test
+  void testHasBlacjack_1(){
+    boolean find = dealer.hasBlacjack();
+    assertEquals(find, true);
+  }
 }
