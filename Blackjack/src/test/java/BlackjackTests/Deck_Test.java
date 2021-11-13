@@ -2,12 +2,10 @@ package BlackjackTests;
 import code.Card;
 import code.Deck;
 
+import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,8 +36,8 @@ public class Deck_Test {
 
   @Test
   public void swapCardsTestV1(){
-    int pos1 = 40;
-    int pos2 = 20;
+    int pos1 = 40; //partició equivalent
+    int pos2 = 20; //partició equivalent
     Deck deckTest = new Deck();
 
     assertTrue(pos1 <= 52);
@@ -58,8 +56,8 @@ public class Deck_Test {
 
   @Test
   public void swapCardsTestV2(){
-    int pos1 = 0;
-    int pos2 = 51;
+    int pos1 = 0; //valor frontera
+    int pos2 = 51; //valor frontera
     Deck deckTest = new Deck();
 
     assertTrue(pos1 <= 51);
@@ -73,20 +71,37 @@ public class Deck_Test {
 
     assertEquals(deckTest.deck.get(pos2).getNum(),aux.getNum());
     assertEquals(deckTest.deck.get(pos2).getSuit(),aux.getSuit());
+    assertEquals(false, deckTest.swapCards(-1,52));
+    assertEquals(false, deckTest.swapCards(52,-1));
 
 
+  }
+  //V1
+  @Test
+  public void shuffleTestV1(){
+    Deck deckTest = new Deck();
+    Deck auxDeck = new Deck();
+
+    deckTest.shuffle();
+
+    assertNotEquals(auxDeck.deck.get(0),deckTest.deck.get(0));
+    assertNotEquals(auxDeck.deck.get(51),deckTest.deck.get(51));
+  }
+  //V2
+  @Test
+  public void shuffleTest(){
+    Deck deckTest = new Deck();
+    Deck auxDeck = new Deck();
+
+    deckTest.shuffle();
+
+    assertNotEquals(auxDeck.deck,deckTest.deck);
   }
 
   @Test
-  public void shuffleTest(){
-
+  public void nextCardTest(){
     Deck deckTest = new Deck();
+    assertNotNull(deckTest.nextCard());
 
   }
-
-
-
-
-
-
 }
