@@ -51,11 +51,32 @@ public class Deck_Test {
 
     assertEquals(deckTest.deck.get(pos2).getNum(),aux.getNum());
     //assertEquals(deckTest.deck.get(pos1).getNum(),deckTest.deck.get(pos2).getNum());
-
     //assertEquals(deckTest.deck.get(pos2).getSuit(),deckTest.deck.get(pos1).getSuit());
     //assertEquals(deckTest.deck.get(pos1).getSuit(),deckTest.deck.get(pos2).getSuit());
 
   }
+
+  @Test
+  public void swapCardsTestV2(){
+    int pos1 = 0;
+    int pos2 = 51;
+    Deck deckTest = new Deck();
+
+    assertTrue(pos1 <= 51);
+    assertTrue(pos2 <= 51);
+    assertTrue(pos1 >= 0);
+    assertTrue( pos2 >= 0);
+
+    Card aux = deckTest.deck.get(pos1);
+
+    deckTest.swapCards(pos1, pos2);
+
+    assertEquals(deckTest.deck.get(pos2).getNum(),aux.getNum());
+    assertEquals(deckTest.deck.get(pos2).getSuit(),aux.getSuit());
+
+
+  }
+
   @Test
   public void shuffleTest(){
 
