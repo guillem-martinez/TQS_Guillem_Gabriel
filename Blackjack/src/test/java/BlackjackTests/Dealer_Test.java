@@ -5,17 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Dealer_Test {
-
-  Dealer dealer;
-
-  @BeforeEach
-  void setUp(){
-    dealer = new Dealer();
-  }
-
+  
   @Test
-  void testHasBlacjack_1(){
-    boolean find = dealer.hasBlacjack();
+  void testHasBlacjackV1(){
+    Dealer dealerTest = new Dealer();
+    boolean find = dealerTest.hasBlacjack();
     assertEquals(find, true);
   }
 }

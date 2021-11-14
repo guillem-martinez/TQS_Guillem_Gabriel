@@ -2,11 +2,29 @@ package BlackjackTests;
 
 public class Dealer {
 
-  //private Hand hand = new Hand();
+  public Hand hand;
 
-  public boolean hasBlacjack(){return true;} // this.calculateTotal() == 21;
-  public void addCard(Card card){}
-  public int calculateTotal(){return 0;}
-  public void clearHand(){}
+  public Dealer(){
+    hand = new Hand();
+  }
+
+  public boolean hasBlacjack(){
+    if (this.calculateTotal() == 21) {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  public void addCard(Card card){
+    hand.addCard(card);
+  }
+  public int calculateTotal(){
+    return hand.calculateTotal();
+  }
+  public void clearHand(){
+    hand.clearHand();
+  }
 
 }
