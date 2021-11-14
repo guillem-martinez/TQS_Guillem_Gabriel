@@ -71,7 +71,20 @@ public class Card_Test {
     assertTrue(cardTest.getSuit() == "S");
 
   }
+  @Test
+  public void setSuitTest(){
+    Card cardTest = new Card(1,"C");
+    cardTest.setSuit("D");
+    assertEquals("D",cardTest.getSuit());
+  }
 
+  @Test
+  public void setNumTest(){
+    Card cardTest = new Card(1,"C");
+    cardTest.setNum(2);
+    assertEquals(2,cardTest.getNum());
+
+  }
 
 
 

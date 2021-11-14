@@ -17,11 +17,17 @@ public class Dealer_Test {
 
   @Mock
   private Card cardMock1 = new Card(1,"S");
+  @Mock
   private Card cardMock2 = new Card(2,"S");
+  @Mock
   private Card cardMock3 = new Card(3,"S");
+  @Mock
   private Card cardMock4 = new Card(4,"S");
+  @Mock
   private Card cardMock5 = new Card(5,"S");
+  @Mock
   private Card cardMock10 = new Card(10,"S");
+  @Mock
   private Card cardMock11 = new Card(11,"S");
 
   @Test
