@@ -1,6 +1,5 @@
-package code;
+package BlackjackTests;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +12,26 @@ public class Hand {
     cards = new ArrayList<Card>(NUM_MAX_CARDS);
   }
 
-  public int calculateTotal(){return 0;}
+  public int calculateTotal(){
+    int sum = 0;
+    if(!cards.isEmpty())
+    {
+      for(int i=cards.size()-1;i>=0;i--){
+        sum = sum + cards.get(i).getNum();
+      }
+    }
+
+    return sum;
+  }
   public boolean addCard(Card card){
     /* V1
     cards.add(card);
     numCards++;
     return true;
     */
+    if (cards.size()>=NUM_MAX_CARDS){
+      return false;
+    }
 
     if (cards.contains(card)){
       return false;
@@ -31,6 +43,23 @@ public class Hand {
     }
 
   }
-  public void clearHand(){}
+  public void clearHand(){
+
+    if(!cards.isEmpty()){
+      cards.clear();
+    }
+
+    numCards = 0;
+
+    /* V1
+    if(!cards.isEmpty()) {
+      for (int i = cards.size()-1; i >= 0; i--) {
+        cards.remove(i);
+      }
+    }
+    */
+
+
+  }
   public int getNumCards(){return this.numCards;}
 }

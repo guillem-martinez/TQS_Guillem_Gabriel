@@ -1,4 +1,4 @@
-package code;
+package BlackjackTests;
 
 import java.util.HashMap;
 

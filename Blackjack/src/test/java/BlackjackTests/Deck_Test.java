@@ -1,14 +1,8 @@
 package BlackjackTests;
-import code.Card;
-import code.Deck;
 
 import static org.junit.Assert.*;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 
 public class Deck_Test {
@@ -20,18 +14,18 @@ public class Deck_Test {
     int capacity = deckTest.deck.size();
 
     assertEquals(52,capacity);
-
+    /*
     boolean find;
-    Card cardTest = new Card(10,"S");
+    Card cardTest = Card(10,"S");
     find = deckTest.deck.contains(cardTest);
 
-    assertTrue(true == find);
+    //assertTrue(find);
 
     cardTest.setNum(15);
     find = deckTest.deck.contains(cardTest);
 
     assertTrue(find == false);
-
+    */
   }
 
   @Test

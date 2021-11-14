@@ -1,4 +1,4 @@
-package code;
+package BlackjackTests;
 
 public class Player {
 

@@ -1,8 +1,8 @@
-package code;
+package BlackjackTests;
 
 public class Dealer {
 
-  private Hand hand = new Hand();
+  //private Hand hand = new Hand();
 
   public boolean hasBlacjack(){return true;} // this.calculateTotal() == 21;
   public void addCard(Card card){}
