@@ -16,10 +16,10 @@ public class Deck_Test {
     assertEquals(52,capacity);
     /*
     boolean find;
-    Card cardTest = Card(10,"S");
+    Card cardTest = new Card(10,"S");
     find = deckTest.deck.contains(cardTest);
 
-    //assertTrue(find);
+    assertTrue(find);
 
     cardTest.setNum(15);
     find = deckTest.deck.contains(cardTest);
