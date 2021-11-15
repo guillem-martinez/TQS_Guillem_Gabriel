@@ -157,6 +157,18 @@ public class Player_Test {
 
   }
 
+  @Test
+  public void removeFromGameTest(){
+    playerTest.removeFromGame();
+    assertEquals(-1,playerTest.getChips());
+  }
+
+  @Test
+  public void resetBankTest(){
+    playerTest.resetBank();
+    assertEquals(0,playerTest.getChips());
+  }
+
 
 
 }

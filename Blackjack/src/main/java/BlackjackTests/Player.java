@@ -11,7 +11,7 @@ public class Player {
     chips = 100;
     hand = new Hand();
   }
-
+  public void setChips(int num){chips = num;}
   public int getChips() {return chips;}
   public String getName(){return name;}
   public int getBet(){return bet;}
@@ -65,6 +65,8 @@ public class Player {
   public void addCard(Card card){
     hand.addCard(card);
   }
+  public void removeFromGame(){chips = -1;}
+  public void resetBank(){chips = 0;}
 
 
 }

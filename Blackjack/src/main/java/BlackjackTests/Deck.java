@@ -19,7 +19,7 @@ public class Deck {
       deck.add(new Card(i,"S"));
     }
   }
-
+  public List<Card> getDeck(){return deck;}
   public boolean swapCards(int pos1, int pos2){
     //
     if (((pos2 >= 0)&(pos2 <= 51))&((pos1 >= 0)&(pos1 <= 51))) {
@@ -63,6 +63,9 @@ public class Deck {
     }
     return deck.get(cardPointer++);
   }
+
+  public int getCardPointer(){return cardPointer;}
+  public void setCardPointer(int n){cardPointer=n;}
 
 
 }

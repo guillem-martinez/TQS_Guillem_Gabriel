@@ -29,6 +29,10 @@ public class Dealer_Test {
   private Card cardMock10 = new Card(10,"S");
   @Mock
   private Card cardMock11 = new Card(11,"S");
+  @Mock
+  private Deck deckMock = new Deck();
+  @Mock
+  private Vista vistaMock = new Vista();
 
   @Test
   public void clearHandTest() {
@@ -83,5 +87,40 @@ public class Dealer_Test {
   public void isBlackjackTestFalse(){
     dealerTest.addCard(cardMock2);
     assertFalse(dealerTest.hasBlacjack());
+  }
+
+  @Test
+  public void dealerPlayCanPlayTest(){
+    dealerTest.hand.addCard(cardMock10);
+    dealerTest.hand.addCard(cardMock5);
+    dealerTest.hand.addCard(cardMock1);
+    int sizeTest = dealerTest.hand.cards.size();
+    dealerTest.dealerPlay(deckMock);
+
+    assertNotEquals(sizeTest,dealerTest.hand.cards.size());
+
+  }
+
+  @Test
+  public void dealerPlayCannotPlayTest(){
+    dealerTest.hand.addCard(cardMock10);
+    dealerTest.hand.addCard(cardMock5);
+    dealerTest.hand.addCard(cardMock3);
+    int sizeTest = dealerTest.hand.cards.size();
+    dealerTest.dealerPlay(deckMock);
+
+    assertEquals(sizeTest,dealerTest.hand.cards.size());
+  }
+
+  @Test
+  public void dealerPlayBustAndStandsTest(){
+    dealerTest.hand.addCard(cardMock10);
+    dealerTest.hand.addCard(cardMock5);
+    dealerTest.hand.addCard(cardMock3);
+    dealerTest.hand.addCard(cardMock11);
+    int sizeTest = dealerTest.hand.cards.size();
+    dealerTest.dealerPlay(deckMock);
+
+    assertEquals(sizeTest,dealerTest.hand.cards.size());
   }
 }

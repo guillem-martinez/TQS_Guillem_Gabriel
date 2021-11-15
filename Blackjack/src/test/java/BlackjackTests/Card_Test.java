@@ -1,6 +1,7 @@
 package BlackjackTests;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import java.util.List;
 
@@ -11,12 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class Card_Test {
 
-
+  @Mock
+  private Card cardTest;
 
   @Test
   public void cardConstructorTest() {
 
-    Card cardTest = new Card(1, "S");
+    cardTest = new Card(1, "S");
 
     assertEquals(1, cardTest.getNum());
     assertEquals("S", cardTest.getSuit());
@@ -26,7 +28,7 @@ public class Card_Test {
 
   @Test
   public void validNumberTest() { //valors limit
-    Card cardTest = new Card(15,"S");
+    cardTest = new Card(14,"S");
     boolean find;
     List<Integer> listTest = cardTest.getValues();
     find = listTest.contains(cardTest.getNum());
@@ -36,20 +38,23 @@ public class Card_Test {
   }
 
   @Test
-  public void validSuitTest() { //valors limit
-    Card cardTest = new Card(5,"G");
+  public void validSuitTest() { //partició equivalent
+    cardTest = new Card(5,"G");
     boolean find;
     List<String> listTest = cardTest.getSuits();
     find = listTest.contains(cardTest.getSuits());
-
     assertFalse(find == true);
-
+    cardTest = new Card(5,"Hearts");
+    boolean find2;
+    List<String> listTest2 = cardTest.getSuits();
+    find2 = listTest.contains(cardTest.getSuits());
+    assertFalse(find2 == true);
 
   }
 
   @Test
   public void getNumTest(){
-    Card cardTest = new Card(1,"P");
+    cardTest = new Card(1,"P");
     assertTrue(cardTest.getNum() == 1);
     cardTest.setNum(2);
     assertTrue(cardTest.getNum() == 2);
@@ -60,7 +65,7 @@ public class Card_Test {
 
   @Test
   public void getSuitTest(){
-    Card cardTest = new Card(1,"C");
+    cardTest = new Card(1,"C");
 
     assertTrue(cardTest.getSuit() == "C");
     cardTest.setSuit("D");
@@ -73,14 +78,14 @@ public class Card_Test {
   }
   @Test
   public void setSuitTest(){
-    Card cardTest = new Card(1,"C");
+    cardTest = new Card(1,"C");
     cardTest.setSuit("D");
     assertEquals("D",cardTest.getSuit());
   }
 
   @Test
   public void setNumTest(){
-    Card cardTest = new Card(1,"C");
+    cardTest = new Card(1,"C");
     cardTest.setNum(2);
     assertEquals(2,cardTest.getNum());
 

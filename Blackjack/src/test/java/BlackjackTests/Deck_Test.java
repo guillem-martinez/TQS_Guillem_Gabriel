@@ -3,6 +3,7 @@ package BlackjackTests;
 import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 
 public class Deck_Test {
@@ -42,9 +43,7 @@ public class Deck_Test {
     deckTest.swapCards(pos1, pos2); // pos 1 tindra 4 cors i pos2 2 picas
 
     assertEquals(deckTest.deck.get(pos2).getNum(),aux.getNum());
-    //assertEquals(deckTest.deck.get(pos1).getNum(),deckTest.deck.get(pos2).getNum());
-    //assertEquals(deckTest.deck.get(pos2).getSuit(),deckTest.deck.get(pos1).getSuit());
-    //assertEquals(deckTest.deck.get(pos1).getSuit(),deckTest.deck.get(pos2).getSuit());
+
 
   }
 
@@ -83,7 +82,7 @@ public class Deck_Test {
   }
   //V2
   @Test
-  public void shuffleTest(){
+  public void shuffleTestV2(){
     Deck deckTest = new Deck();
     Deck auxDeck = new Deck();
 
@@ -96,6 +95,11 @@ public class Deck_Test {
   public void nextCardTest(){
     Deck deckTest = new Deck();
     assertNotNull(deckTest.nextCard());
+    deckTest.setCardPointer(-1);//valor limit
+    assertNull(deckTest.nextCard());
+    deckTest.setCardPointer(52);//valor limit
+    assertNull(deckTest.nextCard());
+
 
   }
 }
