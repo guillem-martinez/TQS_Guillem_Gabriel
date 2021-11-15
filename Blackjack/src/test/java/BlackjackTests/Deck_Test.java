@@ -15,18 +15,6 @@ public class Deck_Test {
     int capacity = deckTest.deck.size();
 
     assertEquals(52,capacity);
-    /*
-    boolean find;
-    Card cardTest = new Card(10,"S");
-    find = deckTest.deck.contains(cardTest);
-
-    assertTrue(find);
-
-    cardTest.setNum(15);
-    find = deckTest.deck.contains(cardTest);
-
-    assertTrue(find == false);
-    */
   }
 
   @Test

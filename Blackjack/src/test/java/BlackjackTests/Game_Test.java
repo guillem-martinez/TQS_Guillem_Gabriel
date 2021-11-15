@@ -28,15 +28,7 @@ public class Game_Test {
   @Mock
   private List<Player> playersTest;
   @Mock
-  private Deck deckTest = new Deck();
-  @Mock
   private Dealer dealerTest = new Dealer();
-  @Mock
-  private String nameTest;
-  @Mock
-  private Scanner scanTest = new Scanner(System.in);
-  @Mock
-  private Vista vistaTest = new Vista();
   @Mock
   private Player plTest1 = new Player();
   @Mock
@@ -192,20 +184,13 @@ public class Game_Test {
     gameTest3.getPlayers().get(0).hand.addCard(cardTest2);
     gameTest3.getPlayers().get(0).hand.addCard(cardTest3);
     gameTest3.getPlayers().get(0).setBet(50);
-
     gameTest3.getDealer().hand.clearHand();
     gameTest3.getDealer().addCard(cardTest1);
     gameTest3.getDealer().addCard(cardTest2);
 
     gameTest3.checkBlackjack();
-
     assertEquals(175, gameTest3.getPlayers().get(0).getChips());
     assertEquals(0, gameTest3.getPlayers().get(0).getBet());
-
-
-
-
-
   }
 
   @Test
@@ -320,6 +305,15 @@ public class Game_Test {
 
     assertTrue(find);
 
+    gameTest.getPlayers().get(0).setChips(60);
+    boolean find2 = gameTest.forceEnd();
+
+    assertFalse(find2);
+
+    gameTest.getPlayers().get(0).setChips(1);
+    boolean find3 = gameTest.forceEnd();
+
+    assertFalse(find3);
   }
 
   @Test
