@@ -75,13 +75,10 @@ public class Game_Test {
     assertNotNull(gameTest.getDeck());
     assertTrue(gameTest.getUsers() > 0 & gameTest.getUsers() < 7);
 
-
     //assertEquals(userTest,playersTest.size());
     assertNotNull(gameTest.getPlayers().get(0).getName());
     assertEquals("Guillem", gameTest.getPlayers().get(0).getName());
     assertEquals("Biel", gameTest.getPlayers().get(1).getName());
-
-
   }
 
   @Test
@@ -116,7 +113,10 @@ public class Game_Test {
     dealerTest = gameTest.getDealer();
     assertNotEquals(playersTest.get(0).getChips(), 0);
     assertNotNull(playersTest.get(0).hand.cards.get(0));
+    assertNotNull(playersTest.get(0).hand.cards.get(1));
     assertNotNull(dealerTest.hand.cards.get(0));
+    assertNotNull(dealerTest.hand.cards.get(1));
+    assertEquals(2,dealerTest.hand.cards.size());
   }
 
   @Test
@@ -142,8 +142,6 @@ public class Game_Test {
         Assertions.assertEquals(sizeTest, dealerTest.hand.cards.size());
       }
     }
-
-
   }
 
   @Test

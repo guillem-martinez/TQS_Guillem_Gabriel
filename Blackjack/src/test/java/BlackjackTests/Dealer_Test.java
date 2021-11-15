@@ -74,7 +74,7 @@ public class Dealer_Test {
   }
 
   @Test
-  public void isBlackjackTest(){
+  public void hasBlackjackTest(){
 
     dealerTest.addCard(cardMock10);
     dealerTest.addCard(cardMock11);
@@ -84,7 +84,7 @@ public class Dealer_Test {
   }
 
   @Test
-  public void isBlackjackTestFalse(){
+  public void hasBlackjackTestFalse(){
     dealerTest.addCard(cardMock2);
     assertFalse(dealerTest.hasBlacjack());
   }
@@ -105,7 +105,7 @@ public class Dealer_Test {
   public void dealerPlayCannotPlayTest(){
     dealerTest.hand.addCard(cardMock10);
     dealerTest.hand.addCard(cardMock5);
-    dealerTest.hand.addCard(cardMock3);
+    dealerTest.hand.addCard(cardMock2);
     int sizeTest = dealerTest.hand.cards.size();
     dealerTest.dealerPlay(deckMock);
 
@@ -115,8 +115,7 @@ public class Dealer_Test {
   @Test
   public void dealerPlayBustAndStandsTest(){
     dealerTest.hand.addCard(cardMock10);
-    dealerTest.hand.addCard(cardMock5);
-    dealerTest.hand.addCard(cardMock3);
+    dealerTest.hand.addCard(cardMock1);
     dealerTest.hand.addCard(cardMock11);
     int sizeTest = dealerTest.hand.cards.size();
     dealerTest.dealerPlay(deckMock);

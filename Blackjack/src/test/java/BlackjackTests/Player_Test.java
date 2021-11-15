@@ -8,6 +8,20 @@ public class Player_Test {
 
   @Mock
   Player playerTest = new Player();
+  @Mock
+  int bet = 50;
+  @Mock
+  int chipsTest;
+  @Mock
+  private Card cardMock1 = new Card(1,"S");
+  @Mock
+  private Card cardMock2 = new Card(2,"S");
+  @Mock
+  private Card cardMock3 = new Card(3,"S");
+  @Mock
+  private Card cardMock4 = new Card(4,"S");
+  @Mock
+  private Card cardMock5 = new Card(5,"S");
 
   @Test
   public void getChipsTest(){
@@ -35,12 +49,6 @@ public class Player_Test {
     playerTest.setBet(0);
     assertEquals(1, playerTest.getBet());
   }
-
-
-  @Mock
-  int bet = 50;
-  @Mock
-  int chipsTest;
 
   @Test
   public void bustTest(){
@@ -104,19 +112,6 @@ public class Player_Test {
     assertFalse(playerTest.setBet(0));//valor frontera
     assertTrue(playerTest.setBet(bet));
   }
-
-
-
-  @Mock
-  private Card cardMock1 = new Card(1,"S");
-  @Mock
-  private Card cardMock2 = new Card(2,"S");
-  @Mock
-  private Card cardMock3 = new Card(3,"S");
-  @Mock
-  private Card cardMock4 = new Card(4,"S");
-  @Mock
-  private Card cardMock5 = new Card(5,"S");
 
   @Test
   public void clearHandTest() {
