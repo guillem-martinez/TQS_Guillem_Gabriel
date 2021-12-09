@@ -101,7 +101,7 @@ public class Game {
     } else {
       for (int i = 0; i < users; i++) {
         if (players.get(i).getTotal() == 21) {
-          vista.BlackJackAchieved();
+          //vista.BlackJackAchieved();
           players.get(i).blackjack();
         }
 

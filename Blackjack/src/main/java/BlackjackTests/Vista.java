@@ -6,7 +6,14 @@ public class Vista {
 
   public void printRules(){
     System.out.println("WELCOME TO TQS BLACKJACK");
-    System.out.println("RULES:");
+    System.out.println("RULES:\n");
+    System.out.println("	-Each player is dealt 2 cards. The dealer is dealt 2 cards ");
+    System.out.println("	-The players cards are added up for their total.");
+    System.out.println("	-Players “Hit” to gain another card from the deck. Players “Stay” to keep their current card total.");
+    System.out.println("	-Dealer “Hits” until they equal or exceed 17.");
+    System.out.println("	-The goal is to have a higher card total than the dealer without going over 21.");
+    System.out.println("	-If the player total equals the dealer total, it is a “Push” and the hand ends.");
+    System.out.println("	-Players win their bet if they beat the dealer. Players win 1.5x their bet if they get “Blackjack” which is 21.\n");
     System.out.println(" ");
   }
 
