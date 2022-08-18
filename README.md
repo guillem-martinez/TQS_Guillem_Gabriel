@@ -2,7 +2,7 @@
 
 ## Blackjack Game
 
-## Professor al càrrec 
+## Professor in charge 
 tbvaliente@gmail.com
 
 ### Authors
