@@ -1,12 +1,11 @@
-# Software Testing Project
+# Software Testing Project (Blackjack)
+Blackjack Game
 
-## Blackjack Game
-
-## Professor in charge 
+### Professor in charge 
 tbvaliente@gmail.com
 
 ### Authors
-Gabriel Bardají 
+Gabriel Bardají
 Guillem Martinez
 
 #### Code
