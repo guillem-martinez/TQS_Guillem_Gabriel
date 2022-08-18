@@ -5,7 +5,7 @@ Blackjack Game
 tbvaliente@gmail.com
 
 ### Authors
-Gabriel Bardají
+Gabriel Bardají  
 Guillem Martinez
 
 #### Code
